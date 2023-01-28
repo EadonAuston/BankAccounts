@@ -30,6 +30,6 @@
     "eslint": "^8.30.0"
   },
   "dependencies": {
-    "vitest": "^0.26.2"
+    "vitest": "^0.26.3"
   }
 }

@@ -5,11 +5,19 @@
 // getAllDepositsGreaterThanOneHundred(bankAccounts) => [3432, 43242.34, 23432]
 
 export function getAllDepositsGreaterThanOneHundred(array) {
-  // Your code goes here...
+  let arr = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].deposits !== undefined) {
+      for (let x = 0; x < array[i].deposits.length; x++) {
+        if (array[i].deposits[x] > 100) {
+          arr.push(array[i].deposits[x])
+        }
+    }
 
+  }
 }
-
-
+return arr;
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-12"
