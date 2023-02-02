@@ -5,31 +5,19 @@
 
 export function getAllWithdrawals(array) {
   let arr = [];
-
-  for (let i = 0; i < array.length; i++) {
-    arr.push(0)
-  }
  
   for (let i = 0; i < array.length; i++) {
-    if (array[i].withdrawals !== undefined) {
+    if (array[i].withdrawals) {
+      let sum = 0;
       for (let x = 0; x < array[i].withdrawals.length; x++) {
-      arr[i] += array[i].withdrawals[x];
-    } 
-  } else {
-      arr[i] = 0;
+      sum += array[i].withdrawals[x];
+      } 
+      arr.push(sum);
+    } else {
+      arr.push(0);
+    }
   }
-    //   for (let i = 0; i < array[i].withdrawals.length; i++) {
-    //     if (array[i].withdrawals !== undefined) {
-    //       arr[i] += array[i].withdrawals;
-    //   } else {
-    //     i++;
-    //   }
-    // }
-   
-  }
-
   return arr;
-
 }
 
 
